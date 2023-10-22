@@ -85,7 +85,7 @@
                      plain
                      icon="Plus"
                      @click="handleAdd"
-                     v-hasPermi="['system:user:add']"
+                     v-hasPermit="['system:user:add']"
                   >新增</el-button>
                </el-col>
                <el-col :span="1.5">
@@ -95,7 +95,7 @@
                      icon="Edit"
                      :disabled="single"
                      @click="handleUpdate"
-                     v-hasPermi="['system:user:edit']"
+                     v-hasPermit="['system:user:edit']"
                   >修改</el-button>
                </el-col>
                <el-col :span="1.5">
@@ -105,7 +105,7 @@
                      icon="Delete"
                      :disabled="multiple"
                      @click="handleDelete"
-                     v-hasPermi="['system:user:remove']"
+                     v-hasPermit="['system:user:remove']"
                   >删除</el-button>
                </el-col>
                <el-col :span="1.5">
@@ -114,7 +114,7 @@
                      plain
                      icon="Upload"
                      @click="handleImport"
-                     v-hasPermi="['system:user:import']"
+                     v-hasPermit="['system:user:import']"
                   >导入</el-button>
                </el-col>
                <el-col :span="1.5">
@@ -123,7 +123,7 @@
                      plain
                      icon="Download"
                      @click="handleExport"
-                     v-hasPermi="['system:user:export']"
+                     v-hasPermit="['system:user:export']"
                   >导出</el-button>
                </el-col>
                <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" :columns="columns"></right-toolbar>
@@ -154,16 +154,16 @@
                <el-table-column label="操作" align="center" width="150" class-name="small-padding fixed-width">
                   <template #default="scope">
                      <el-tooltip content="修改" placement="top" v-if="scope.row.userId !== 1">
-                        <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:user:edit']"></el-button>
+                        <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermit="['system:user:edit']"></el-button>
                      </el-tooltip>
                      <el-tooltip content="删除" placement="top" v-if="scope.row.userId !== 1">
-                        <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:user:remove']"></el-button>
+                        <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermit="['system:user:remove']"></el-button>
                      </el-tooltip>
                      <el-tooltip content="重置密码" placement="top" v-if="scope.row.userId !== 1">
-                         <el-button link type="primary" icon="Key" @click="handleResetPwd(scope.row)" v-hasPermi="['system:user:resetPwd']"></el-button>
+                         <el-button link type="primary" icon="Key" @click="handleResetPwd(scope.row)" v-hasPermit="['system:user:resetPwd']"></el-button>
                      </el-tooltip>
                      <el-tooltip content="分配角色" placement="top" v-if="scope.row.userId !== 1">
-                        <el-button link type="primary" icon="CircleCheck" @click="handleAuthRole(scope.row)" v-hasPermi="['system:user:edit']"></el-button>
+                        <el-button link type="primary" icon="CircleCheck" @click="handleAuthRole(scope.row)" v-hasPermit="['system:user:edit']"></el-button>
                      </el-tooltip>
                   </template>
                </el-table-column>

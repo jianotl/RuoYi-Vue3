@@ -1,5 +1,5 @@
 import hasRole from './permission/hasRole'
-import hasPermi from './permission/hasPermi'
+import hasPermi from './permission/hasPermit'
 import copyText from './common/copyText'
 
 export default function directive(app){
