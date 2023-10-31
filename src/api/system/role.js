@@ -38,7 +38,7 @@ export function updateRole(data) {
 // 角色数据权限
 export function dataScope(data) {
   return request({
-    url: '/system/role/dataScope',
+    url: '/system/role/data/scope',
     method: 'put',
     data: data
   })
@@ -51,7 +51,7 @@ export function changeRoleStatus(roleId, status) {
     status
   }
   return request({
-    url: '/system/role/changeStatus',
+    url: '/system/role/change/status',
     method: 'put',
     data: data
   })
@@ -68,7 +68,7 @@ export function delRole(roleId) {
 // 查询角色已授权用户列表
 export function allocatedUserList(query) {
   return request({
-    url: '/system/role/authUser/allocatedList',
+    url: '/system/role/auth/user/allocated/list',
     method: 'get',
     params: query
   })
@@ -77,7 +77,7 @@ export function allocatedUserList(query) {
 // 查询角色未授权用户列表
 export function unallocatedUserList(query) {
   return request({
-    url: '/system/role/authUser/unallocatedList',
+    url: '/system/role/auth/user/unallocated/list',
     method: 'get',
     params: query
   })
@@ -86,7 +86,7 @@ export function unallocatedUserList(query) {
 // 取消用户授权角色
 export function authUserCancel(data) {
   return request({
-    url: '/system/role/authUser/cancel',
+    url: '/system/role/auth/user/cancel',
     method: 'put',
     data: data
   })
@@ -95,7 +95,7 @@ export function authUserCancel(data) {
 // 批量取消用户授权角色
 export function authUserCancelAll(data) {
   return request({
-    url: '/system/role/authUser/cancelAll',
+    url: '/system/role/auth/user/cancel/all',
     method: 'put',
     params: data
   })
@@ -104,7 +104,7 @@ export function authUserCancelAll(data) {
 // 授权用户选择
 export function authUserSelectAll(data) {
   return request({
-    url: '/system/role/authUser/selectAll',
+    url: '/system/role/auth/user/select/all',
     method: 'put',
     params: data
   })
@@ -113,7 +113,7 @@ export function authUserSelectAll(data) {
 // 根据角色ID查询部门树结构
 export function deptTreeSelect(roleId) {
   return request({
-    url: '/system/role/deptTree/' + roleId,
+    url: '/system/role/dept/tree/' + roleId,
     method: 'get'
   })
 }

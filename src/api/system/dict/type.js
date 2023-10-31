@@ -46,7 +46,7 @@ export function delType(dictId) {
 // 刷新字典缓存
 export function refreshCache() {
   return request({
-    url: '/system/dict/type/refreshCache',
+    url: '/system/dict/type/refresh/cache',
     method: 'delete'
   })
 }
@@ -54,7 +54,7 @@ export function refreshCache() {
 // 获取字典选择框列表
 export function optionselect() {
   return request({
-    url: '/system/dict/type/optionselect',
+    url: '/system/dict/type/option/select',
     method: 'get'
   })
 }

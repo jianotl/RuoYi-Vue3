@@ -443,7 +443,7 @@ function getRoleMenuTreeselect(roleId) {
 /** 根据角色ID查询部门树结构 */
 function getDeptTree(roleId) {
   return deptTreeSelect(roleId).then(response => {
-    deptOptions.value = response.depts;
+    deptOptions.value = response.deptList;
     return response;
   });
 }

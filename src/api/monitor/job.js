@@ -50,7 +50,7 @@ export function changeJobStatus(jobId, status) {
     status
   }
   return request({
-    url: '/monitor/job/changeStatus',
+    url: '/monitor/job/change/status',
     method: 'put',
     data: data
   })
