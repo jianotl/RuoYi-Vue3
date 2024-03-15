@@ -145,6 +145,7 @@ function getCode() {
     captchaEnabled.value = res.captchaEnabled === undefined ? true : res.captchaEnabled;
     if (captchaEnabled.value) {
       codeUrl.value = "data:image/gif;base64," + res.img;
+      // codeUrl.value = res.img;
       registerForm.value.uuid = res.uuid;
     }
   });
